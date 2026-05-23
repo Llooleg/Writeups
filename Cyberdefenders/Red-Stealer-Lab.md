@@ -57,4 +57,40 @@ Following execution, which social media-related domain names did the malware res
 ![title](Images/img5.png)
 
 
+TASK-6
 
+Once the malicious IP addresses are identified, network security devices such as firewalls can be configured to block traffic to and from these addresses. Can you provide the IP address and destination port the malware communicates with?
+
+Данный вопрос относится к парамтру "Memory pattern URLs". Это ссылки, захардкоженные в бинарнике файла, обнаруживаются при статическом анализе
+
+![title](Images/img6.png)
+
+
+TASK-7
+
+YARA rules are designed to identify specific malware patterns and behaviors. Using MalwareBazaar, what's the name of the YARA rule created by "Varp0s" that detects the identified malware?
+
+Найдем по хешу (sha256:248fcc901aff4e4b4c48c91e4d78a939bf681c9a1bc24addc3551b32768f907b) на MalwareBaazar и посмотрим YARA правило
+
+![title](Images/img7.png)
+
+
+TASK-8
+
+Understanding which malware families are targeting the organization helps in strategic security planning for the future and prioritizing resources based on the threat. Can you provide the different malware alias associated with the malicious IP address according to ThreatFox?
+
+Здесь как искать по хешу не сообразил, однако так как у нас уже есть IP потенциального C2 сервера (согласно захардкоженным URL) мы можем найти по тегу ioc:77.91.124.55 и увидеть альтернативное имя
+
+![title](Images/img8.png)
+
+
+TASK-9
+
+By identifying the malware's imported DLLs, we can configure security tools to monitor for the loading or unusual usage of these specific DLLs. Can you provide the DLL utilized by the malware for privilege escalation?
+
+Посмотрим какие dllки он подгружает. Видим несколько, однако нам нужна только которая была использована для повышения привилегий
+гуглим advapi32.dll и смотрим за что он отвечает
+ADVAPI32.dll (Advanced Windows 32 Base API) — это важнейший системный компонент операционной системы Windows. Он отвечает за работу с безопасностью, управление учетными записями, правами доступа и системным реестром.
+думайте, как говориться
+
+![title](Images/img9.png)
