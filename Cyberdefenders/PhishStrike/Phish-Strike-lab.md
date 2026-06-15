@@ -3,6 +3,7 @@ Your task is to investigate the email using Threat Intel tools. Analyze the emai
 
 
 https://cyberdefenders.org/blueteam-ctf-challenges/phishstrike/
+
 TASK-1
 
 Identifying the sender's IP address with specific SPF and DKIM values helps trace the source of the phishing email. What is the sender's IP address that has an SPF value of softfail and a DKIM value of fail?
